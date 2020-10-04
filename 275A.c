@@ -1,0 +1,43 @@
+#include<stdio.h>
+int main()
+{
+    int q1,q2,q3,w1,w2,w3,e1,e2,e3;
+    scanf("%d%d%d\n%d%d%d\n%d%d%d",&q1,&q2,&q3,&w1,&w2,&w3,&e1,&e2,&e3);
+
+        if((q1+q2+w1)%2==0)
+        printf("1");
+        else
+        printf("0");
+        if((q1+q2+q3+w2)%2==0)
+        printf("1");
+        else
+        printf("0");
+        if((w3+q2+q3)%2==0)
+        printf("1\n");
+        else
+        printf("0\n");
+        if((q1+w2+w1+e1)%2==0)
+        printf("1");
+        else
+        printf("0");
+        if((w1+q2+w3+w2+e2)%2==0)
+        printf("1");
+        else
+        printf("0");
+        if((w3+w2+q3+e3)%2==0)
+        printf("1\n");
+        else
+        printf("0\n");
+        if((e1+e2+w1)%2==0)
+        printf("1");
+        else
+        printf("0");
+        if((e1+e2+e3+w2)%2==0)
+        printf("1");
+        else
+        printf("0");
+        if((w3+e2+e3)%2==0)
+        printf("1");
+        else
+        printf("0");
+}

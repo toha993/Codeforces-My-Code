@@ -1,0 +1,56 @@
+#include<cstdio>
+#include<sstream>
+#include<cstdlib>
+#include<cctype>
+#include<cmath>
+#include<algorithm>
+#include<set>
+#include<queue>
+#include<stack>
+#include<list>
+#include<iostream>
+#include<fstream>
+#include<numeric>
+#include<string>
+#include<vector>
+#include<cstring>
+#include<map>
+#include<iterator>
+#include <iomanip>
+
+using namespace std;
+
+// #include <ext/pb_ds/assoc_container.hpp>
+// #include <ext/pb_ds/tree_policy.hpp>
+// using namespace __gnu_pbds;
+// typedef tree<int,null_type,less<int>,rb_tree_tag, tree_order_statistics_node_update> ordered_set;
+
+
+int main()
+{
+	string s;
+	cin >>s;
+	long long ck=0,cp=0;
+	long long ans=0;
+	for (int i = 0; i < s.length()-1; ++i)
+	{
+		if(s[i]=='v' && s[i+1]=='v')
+		{
+			ck++;
+		}
+	}
+	for (int i = 0; i < s.length()-1; ++i)
+	{
+		if(s[i]=='v' && s[i+1]=='v')
+		{
+			cp++;
+		}
+		else if(s[i]=='o')
+		{
+			ans +=(cp*(ck-cp));
+			//i++;
+		}
+		//cout << ans << endl;
+	}
+	cout << ans << endl;
+}
